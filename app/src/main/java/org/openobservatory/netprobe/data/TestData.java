@@ -122,13 +122,12 @@ public class TestData extends Observable {
                         // and then work onto the returned generic object once we are ready
                         Log.v(TAG, "running new style tcp-connect test...");
                         Log.v(TAG, "xx " + ca_cert);
-                        OoniTestWrapper w = new OoniTestWrapper("tcp_connect");
+                        // XXX changing the test here temporarily to show how to use it
+                        OoniTestWrapper w = new OoniTestWrapper("ndt");
                         w.use_logcat();
-                        w.set_options("port", "80");
-                        w.set_input_filepath(inputPath);
                         w.set_output_filepath(outputPath);
                         w.set_error_filepath(logPath);
-                        w.set_verbosity(7);
+                        w.set_verbosity(1);
                         w.set_options("net/ca_bundle_path", ca_cert);
                         w.set_options("geoip_country_path", geoip_country);
                         w.set_options("geoip_asn_path", geoip_asn);
